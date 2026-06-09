@@ -379,10 +379,21 @@ def basvuru_onayla(request, basvuru_id):
 
 
     ilan = basvuru.ilan
-    ilan.aktif_mi = False
-    ilan.save()
+    if ilan.kisi_sayisi and int(ilan.kisi_sayisi) > 0:
+        yeni_sayi = int(ilan.kisi_sayisi) - 1
+        ilan.kisi_sayisi = yeni_sayi
+        
+       
+        if yeni_sayi == 0:
+            ilan.aktif_mi = False
+            
+        ilan.save()
+    else:
+        
+        ilan.aktif_mi = False
+        ilan.save()
 
-    return redirect('/')
+    return redirect('/basvurular/')
 
 
 def basvuru_reddet(request, basvuru_id):
@@ -612,4 +623,4 @@ def puan_ver(request, basvuru_id):
                 basvuru.save()
                 messages.success(request, f"{isletme.isletme_adi} işletmesini başarıyla puanladınız!")
                 
-    return redirect('/') # Puanlama bitince otomatik anasayfaya atar
+    return redirect('/')
