@@ -94,10 +94,9 @@ Projede temel olarak aşağıdaki yapılar bulunmaktadır:
 
 ## Geliştiriciler
 
-Mahmoud Anis
-Duru Talı
-Elif Ünal
-Mehmet Ali Aktan
+* Mahmoud Anis
+* Duru Talı
+* Elif Ünal
+* Mehmet Ali Aktan
 
-Ege Üniversitesi Meslek Yüksekokulu
-Bilgisayar Programcılığı
+Ege Üniversitesi Meslek Yüksekokulu Bilgisayar Programcılığı
