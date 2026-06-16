@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Kayıt Ol — GünlükİŞ</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
 <style>
-
 :root{
     --bg:#f4f4f6;
     --card:#ffffff;
@@ -18,372 +14,77 @@
     --text:#18181f;
     --muted:#7a7a9a;
 }
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:var(--bg);
-    font-family:'DM Sans',sans-serif;
-    color:var(--text);
-}
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ background:var(--bg); font-family:'DM Sans',sans-serif; color:var(--text); }
 
 /* NAVBAR */
-
-nav{
-    width:100%;
-    background:white;
-    border-bottom:1px solid var(--border);
-    padding:18px 50px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-family:'Syne',sans-serif;
-    font-size:34px;
-    font-weight:800;
-    color: var(--text) !important;
-    text-decoration: none;
-}
-
-.logo span{
-    color:var(--accent);
-}
-
-.nav-links{
-    display:flex;
-    gap:45px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:var(--text);
-    font-weight:500;
-}
-
-.nav-buttons{
-    display:flex;
-    gap:14px;
-}
-
-.btn-login{
-    padding:12px 28px;
-    border-radius:14px;
-    border:1px solid var(--border);
-    background:white;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.btn-register{
-    padding:12px 28px;
-    border:none;
-    border-radius:14px;
-    background:var(--accent);
-    font-weight:700;
-    cursor:pointer;
-}
+nav{ width:100%; background:white; border-bottom:1px solid var(--border); padding:18px 50px; display:flex; align-items:center; justify-content:space-between; }
+.logo{ font-family:'Syne',sans-serif; font-size:34px; font-weight:800; color: var(--text) !important; text-decoration: none; }
+.logo span{ color:var(--accent); }
+.nav-links{ display:flex; gap:45px; }
+.nav-links a{ text-decoration:none; color:var(--text); font-weight:500; }
+.nav-buttons{ display:flex; gap:14px; }
+.btn-login{ padding:12px 28px; border-radius:14px; border:1px solid var(--border); background:white; font-weight:600; cursor:pointer; }
+.btn-register{ padding:12px 28px; border:none; border-radius:14px; background:var(--accent); font-weight:700; cursor:pointer; }
 
 /* PAGE */
-
-.page{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 30px;
-}
-
-.top-back{
-    margin-bottom:20px;
-}
-
-.top-back a{
-    color:var(--accent);
-    text-decoration:none;
-    font-weight:600;
-}
-
-.page-title{
-    font-family:'Syne',sans-serif;
-    font-size:58px;
-    font-weight:800;
-    margin-bottom:10px;
-}
-
-.page-sub{
-    color:var(--muted);
-    font-size:20px;
-    margin-bottom:45px;
-}
+.page{ max-width:1200px; margin:auto; padding:60px 30px; }
+.top-back{ margin-bottom:20px; }
+.top-back a{ color:var(--accent); text-decoration:none; font-weight:600; }
+.page-title{ font-family:'Syne',sans-serif; font-size:58px; font-weight:800; margin-bottom:10px; }
+.page-sub{ color:var(--muted); font-size:20px; margin-bottom:45px; }
 
 /* FORM CARD */
-
-.form-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:30px;
-    padding:45px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.04);
-}
-
-.form-head{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:35px;
-}
-
-.form-head h2{
-    font-size:42px;
-    font-family:'Syne',sans-serif;
-    margin-bottom:8px;
-}
-
-.form-head p{
-    color:var(--muted);
-}
-
-.step{
-    color:var(--muted);
-    font-weight:600;
-}
+.form-card{ background:white; border:1px solid var(--border); border-radius:30px; padding:45px; box-shadow:0 10px 40px rgba(0,0,0,0.04); }
+.form-head{ display:flex; justify-content:space-between; margin-bottom:35px; }
+.form-head h2{ font-size:42px; font-family:'Syne',sans-serif; margin-bottom:8px; }
+.form-head p{ color:var(--muted); }
+.step{ color:var(--muted); font-weight:600; }
 
 /* FORM */
-
-.form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.form-group{
-    margin-bottom:24px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:10px;
-    font-size:13px;
-    font-weight:700;
-    color:#77779a;
-    text-transform:uppercase;
-}
-
-.form-group input{
-    width:100%;
-    padding:18px;
-    border-radius:16px;
-    border:1px solid var(--border);
-    font-size:16px;
-    outline:none;
-    transition:.2s;
-}
-
-.form-group input:focus{
-    border-color:var(--accent);
-}
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.form-group{ margin-bottom:24px; }
+.form-group label{ display:block; margin-bottom:10px; font-size:13px; font-weight:700; color:#77779a; text-transform:uppercase; }
+.form-group input{ width:100%; padding:18px; border-radius:16px; border:1px solid var(--border); font-size:16px; outline:none; transition:.2s; }
+.form-group input:focus{ border-color:var(--accent); }
+.form-group select{ width:100%; padding:18px; border-radius:16px; border:1px solid var(--border); font-size:16px; outline:none; background:white; }
 
 /* BUTTON */
-
-.submit-btn{
-    width:100%;
-    margin-top:10px;
-    padding:22px;
-    border:none;
-    border-radius:18px;
-    background:var(--accent);
-    font-size:24px;
-    font-family:'Syne',sans-serif;
-    font-weight:800;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.submit-btn:hover{
-    transform:translateY(-2px);
-}
-
-.login-text{
-    text-align:center;
-    margin-top:25px;
-    color:var(--muted);
-}
-
-.login-text a{
-    color:var(--accent);
-    text-decoration:none;
-    font-weight:700;
-}
+.submit-btn{ width:100%; margin-top:10px; padding:22px; border:none; border-radius:18px; background:var(--accent); font-size:24px; font-family:'Syne',sans-serif; font-weight:800; cursor:pointer; transition:.2s; }
+.submit-btn:hover{ transform:translateY(-2px); }
 
 /* INFO BOXES */
-
-.info-grid{
-    margin-top:40px;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.info-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:24px;
-    padding:28px;
-}
-
-.info-icon{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:rgba(232,168,0,0.12);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:26px;
-
-    margin-bottom:18px;
-}
-
-.info-card h3{
-    margin-bottom:8px;
-    font-size:22px;
-}
-
-.info-card p{
-    color:var(--muted);
-    line-height:1.7;
-}
-.step-indicator{
-    display:flex;
-    align-items:center;
-    margin-bottom:12px;
-}
-
-.step-dot{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    border:2px solid var(--border);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-weight:700;
-}
-
-.step-dot.active{
-    border-color:var(--accent);
-    color:var(--accent);
-}
-
-.step-line{
-    flex:1;
-    height:2px;
-    background:var(--border);
-}
-
-.step-label{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:35px;
-    color:var(--muted);
-    font-size:14px;
-}
-
-.reg-step{
-    display:none;
-}
-
-.reg-step.active{
-    display:block;
-}
-
-.type-chooser{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.type-card{
-    border:2px solid var(--border);
-    border-radius:20px;
-    padding:30px;
-    cursor:pointer;
-    text-align:center;
-    transition:.2s;
-}
-
-.type-card:hover{
-    border-color:var(--accent);
-}
-
-.type-card.selected{
-    border-color:var(--accent);
-    background:#fff7df;
-}
-
-.tc-icon{
-    font-size:40px;
-    margin-bottom:15px;
-}
-.form-group select{
-
-    width:100%;
-
-    padding:18px;
-
-    border-radius:16px;
-
-    border:1px solid var(--border);
-
-    font-size:16px;
-
-    outline:none;
-
-    background:white;
-
-}
+.info-grid{ margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:25px; }
+.info-card{ background:white; border:1px solid var(--border); border-radius:24px; padding:28px; }
+.info-icon{ width:58px; height:58px; border-radius:50%; background:rgba(232,168,0,0.12); display:flex; align-items:center; justify-content:center; font-size:26px; margin-bottom:18px; }
+.info-card h3{ margin-bottom:8px; font-size:22px; }
+.info-card p{ color:var(--muted); line-height:1.7; }
+.step-indicator{ display:flex; align-items:center; margin-bottom:12px; }
+.step-dot{ width:42px; height:42px; border-radius:50%; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-weight:700; }
+.step-dot.active{ border-color:var(--accent); color:var(--accent); }
+.step-line{ flex:1; height:2px; background:var(--border); }
+.step-label{ display:flex; justify-content:space-between; margin-bottom:35px; color:var(--muted); font-size:14px; }
+.reg-step{ display:none; }
+.reg-step.active{ display:block; }
+.type-chooser{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.type-card{ border:2px solid var(--border); border-radius:20px; padding:30px; cursor:pointer; text-align:center; transition:.2s; }
+.type-card:hover{ border-color:var(--accent); }
+.type-card.selected{ border-color:var(--accent); background:#fff7df; }
+.tc-icon{ font-size:40px; margin-bottom:15px; }
 
 /* RESPONSIVE */
-
 @media(max-width:900px){
-
-    .form-row{
-        grid-template-columns:1fr;
-    }
-
-    .info-grid{
-        grid-template-columns:1fr;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .page-title{
-        font-size:42px;
-    }
-
+    .form-row{ grid-template-columns:1fr; }
+    .info-grid{ grid-template-columns:1fr; }
+    .nav-links{ display:none; }
+    .page-title{ font-size:42px; }
 }
-
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
-
     <a href="/" class="logo">Günlük<span>İŞ</span></a>
-
     <div class="nav-links">
         <a href="/">Anasayfa</a>
         <a href="#">İlanlar</a>
@@ -391,485 +92,261 @@ nav{
         <a href="#">Hakkımızda</a>
         <a href="#">İletişim</a>
     </div>
-
     <div class="nav-buttons">
-        <button class="btn-login">Giriş Yap</button>
-        <button class="btn-register">Kayıt Ol</button>
+        <a href="/giris/"><button class="btn-login">Giriş Yap</button></a>
+        <a href="/kayit/"><button class="btn-register">Kayıt Ol</button></a>
     </div>
-
 </nav>
 
-<!-- PAGE -->
-
 <div class="page">
-
     <div class="top-back">
         <a href="/">← Ana Sayfaya Dön</a>
     </div>
 
-    <h1 class="page-title">
-        Hesap Oluştur
-    </h1>
+    <h1 class="page-title">Hesap Oluştur</h1>
+    <p class="page-sub">Günlük iş fırsatlarına ulaşmak için hesabınızı oluşturun.</p>
 
-    <p class="page-sub">
-        Günlük iş fırsatlarına ulaşmak için hesabınızı oluşturun.
-    </p>
-
-    <!-- FORM CARD -->
-
- <div class="form-card">
-
-    <div class="step-indicator">
-
-        <div class="step-dot active" id="sdot1">1</div>
-
-        <div class="step-line" id="sline1"></div>
-
-        <div class="step-dot" id="sdot2">2</div>
-
-    </div>
-
-    <div class="step-label">
-
-        <span id="slabel1" class="active">
-            Temel Bilgiler
-        </span>
-
-        <span id="slabel2">
-            Hesap Türü
-        </span>
-
-    </div>
-
-    <form method="POST" enctype="multipart/form-data">
-
-<form method="POST" enctype="multipart/form-data">
-
-    {% csrf_token %}
-
-    {% if hata %}
-    <div style="color: red; font-weight: bold; margin-bottom: 15px; text-align: center;">
-        {{ hata }}
-    </div>
-    {% endif %}
-
-    <input type="hidden"
-        name="hesap_turu"
-        id="hesap_turu">
-
-        <!-- STEP 1 -->
-
-        <div class="reg-step active" id="step1">
-
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label>Ad</label>
-
-                    <input type="text"
-                           name="ad"
-                           placeholder="Adınız">
-                </div>
-
-                <div class="form-group">
-                    <label>Soyad</label>
-
-                    <input type="text"
-                           name="soyad"
-                           placeholder="Soyadınız">
-                </div>
-
-            </div>
-
-            <div class="form-group">
-
-                <label>Doğum Tarihi</label>
-
-                <input type="date"
-                       name="dogum_tarihi">
-
-            </div>
-
-            <div class="form-group">
-
-                <label>E-Mail</label>
-
-                <input type="email"
-                       name="email"
-                       placeholder="email@ornek.com">
-
-            </div>
-
-            <div class="form-group">
-
-                <label>Şifre</label>
-
-                <input type="password"
-                       name="sifre"
-                       placeholder="En az 8 karakter">
-
-            </div>
-
-            <div class="form-group">
-
-                <label>Telefon</label>
-
-                <input type="text"
-                       name="telefon"
-                       placeholder="05XX XXX XX XX">
-
-            </div>
-
-            <div class="form-group" style="margin-top: 20px;">
-    <label class="cb-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-        <input type="checkbox" name="sozlesme_onay" required style="width: auto; cursor: pointer;">
-        <span>
-            <a href="javascript:void(0);" onclick="openSozlesmeModal()" style="color: var(--accent); text-decoration: underline; font-weight: 600;">
-                Kullanıcı Sözleşmesini
-            </a> 
-            okudum ve kabul ediyorum.
-        </span>
-    </label>
-</div>
-
-<div class="modal-overlay" id="modal-sozlesme" style="display: none; position: fixed; inset: 0; z-index: 999; background: rgba(248, 248, 248, 0.539); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 20px;">
-    <div class="modal" style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 32px; max-width: 650px; width: 100%; max-height: 80vh; display: flex; flex-direction: column; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-        
-        <button type="button" onclick="closeSozlesmeModal()" style="position: absolute; top: 20px; right: 20px; border: 1px solid var(--border); background: none; border-radius: 10px; width: 36px; height: 36px; cursor: pointer; font-weight: bold; display: flex; align-items: center; justify-content: center;">✕</button>
-        
-        <h2 style="font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 16px; border-bottom: 2px solid var(--surface2); padding-bottom: 10px;">Kullanıcı Sözleşmesi</h2>
-        
-        <div style="overflow-y: auto; flex: 1; padding-right: 10px; font-size: 14px; line-height: 1.6; color: var(--text); text-align: left;">
-            <h3>1. TARAFLAR VE TANIMLAR</h3>
-            <p>İşbu sözleşme, GünlükİŞ ("Platform") ile Platform'a üye olan, ilan veren veya ilanlara başvuran gerçek/tüzel kişiler ("Kullanıcı") arasında akdedilmiştir.</p>
-            <p><strong>Çalışan:</strong> Platform üzerinden günlük iş ilanlarını inceleyen ve başvuru yapan kullanıcıları ifade eder.</p>
-            <p><strong>İşletme:</strong> Platform üzerinde günlük iş ilanı yayınlayan, başvuruları inceleyen ve onaylayan işveren kullanıcıları ifade eder.</p>
-            <br>
-            <h3>2. SÖZLEŞMENİN AMACI VE KAPSAMI</h3>
-            <p>Kullanıcı, kayıt işlemlerini tamamladığı andan itibaren işbu sözleşmenin tamamını okuduğunu ve onayladığını kabul eder.</p>
-            <br>
-            <h3>3. HESAP GÜVENLİĞİ VE ÜYELİK ŞARTLARI</h3>
-            <p>Üyelik formunda talep edilen bilgilerin doğru girilmesi zorunludur. Platform'da yasal olarak günlük iş ilişkisi kurabilmek için alt yaş sınırı 18'dir.</p>
-            <br>
-            <h3>4. PLATFORMUN ROLÜ VE SORUMLULUK SINIRI</h3>
-            <p><strong>GünlükİŞ, bir işveren, istihdam bürosu veya taşeron firma değildir.</strong> Platform'un rolü, sadece iş arayan Çalışan ile geçici personele ihtiyacı olan İşletme’yi bir araya getiren bir aracı panodan ibarettir. İşin ifası sırasında meydana gelebilecek olası iş kazaları, maddi ve manevi zararlar ile sigorta (SGK) yükümlülükleri tamamen İşletme'nin yasal sorumluluğundadır.</p>
-            <br>
-            <h3>5. ÜCRETLENDİRME VE ÖDEME KOŞULLARI</h3>
-            <p>Günlük çalışma ücreti, işin tamamlandığı günün sonunda İşletme tarafından Çalışan’a doğrudan ödenir. GünlükİŞ, bir ödeme havuzu sunmamaktadır.</p>
-            <br>
-            <h3>6. KİŞİSEL VERİLERİN KORUNMASI (KVKK)</h3>
-            <p>Kullanıcılar; ad, soyad, telefon, fotoğraf, fiziksel nitelikler (boy/kilo/cinsiyet) gibi verilerin, ilan ve başvuru ekranları üzerinden diğer kullanıcılarla paylaşılacağını peşinen kabul ederler.</p>
-        </div>
-        
-        <button type="button" onclick="closeSozlesmeModal()" class="btn-primary" style="margin-top: 20px; border-radius: 12px; background: #ffd966; border: 2px solid #ffd966; width: 100%; padding: 12px;">Okudum, Kapat</button>
-    </div>
-</div>
-
-        <button type="button" id="kayit-butonu" class="submit-btn">
-            Devam Et ➔
-        </button>
-
+    <div class="form-card">
+        <div class="step-indicator">
+            <div class="step-dot active" id="sdot1">1</div>
+            <div class="step-line" id="sline1"></div>
+            <div class="step-dot" id="sdot2">2</div>
         </div>
 
-        <!-- STEP 2 -->
+        <div class="step-label">
+            <span id="slabel1" class="active">Temel Bilgiler</span>
+            <span id="slabel2">Hesap Türü</span>
+        </div>
 
-        <div class="reg-step" id="step2">
+        <form method="POST" action="/kayit/" id="kayit-form" enctype="multipart/form-data">
+            {% csrf_token %}
 
-            <h2 style="
-            font-family:'Syne',sans-serif;
-            margin-bottom:25px;
-            ">
-
-            Hesap Türü Seç
-
-            </h2>
-
-            <div class="type-chooser">
-
-                <div class="type-card"
-                     onclick="selectType('calisan')"
-                     id="tc-calisan">
-
-                    <div class="tc-icon">
-                        👷
-                    </div>
-
-                    <h3>Çalışan</h3>
-
-                    <p>
-                        Günlük işlere başvur.
-                    </p>
-
-                </div>
-
-                <div class="type-card"
-                     onclick="selectType('isletme')"
-                     id="tc-isletme">
-
-                    <div class="tc-icon">
-                        🏢
-                    </div>
-
-                    <h3>İşletme</h3>
-
-                    <p>
-                        Çalışan bul ve ilan ver.
-                    </p>
-
-                </div>
-
+            {% if hata %}
+            <div style="color: red; font-weight: bold; margin-bottom: 15px; text-align: center; padding: 10px; border: 1px solid red; border-radius: 8px; background-color: #ffe6e6;">
+                {{ hata }}
             </div>
+            {% endif %}
 
-            <div id="isletme-fields"
-                 style="display:none;margin-top:30px;">
+            <input type="hidden" name="hesap_turu" id="hesap_turu">
 
-                <div class="form-group">
-
-                    <label>İşletme Adı</label>
-
-                    <input type="text"
-                        name="isletme_adi">
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>İşletme Adresi</label>
-
-                    <input type="text"
-                        name="isletme_adresi">
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>İşletme Türü</label>
-
-                    <select name="isletme_tipi">
-
-                        <option>Restoran / Cafe</option>
-
-                        <option>Market</option>
-
-                        <option>Otel</option>
-
-                        <option>Depo / Lojistik</option>
-
-                        <option>Güvenlik</option>
-
-                        <option>Diğer</option>
-
-                    </select>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>İhtiyaç Duyulan Meslekler</label>
-
-                    <input type="text"
-                        name="aranan_meslekler"
-                        placeholder="Garson, Kasiyer...">
-
-                </div>
-            </div>
-            <div id="calisan-fields"
-     style="display:none;margin-top:30px;">
-
+            <div class="reg-step active" id="step1">
                 <div class="form-row">
-
                     <div class="form-group">
-
-                        <label>Boy (cm)</label>
-
-                        <input type="number"
-                            name="boy"
-                            placeholder="175">
-
+                        <label>Ad</label>
+                        <input type="text" name="ad" id="input_ad" placeholder="Adınız" required>
                     </div>
-
                     <div class="form-group">
-
-                        <label>Kilo (kg)</label>
-
-                        <input type="number"
-                            name="kilo"
-                            placeholder="70">
-
+                        <label>Soyad</label>
+                        <input type="text" name="soyad" id="input_soyad" placeholder="Soyadınız" required>
                     </div>
-
                 </div>
 
                 <div class="form-group">
-
-                    <label>Cinsiyet</label>
-
-                    <select name="cinsiyet">
-
-                        <option>Erkek</option>
-
-                        <option>Kadın</option>
-
-                        <option>Belirtmek istemiyorum</option>
-
-                    </select>
-
+                    <label>Doğum Tarihi</label>
+                    <input type="date" name="dogum_tarihi" id="input_dt" required>
                 </div>
 
                 <div class="form-group">
-
-                    <label>Meslekler / Deneyim</label>
-
-                    <input type="text"
-                        name="meslekler"
-                        placeholder="Garson, Kasiyer, Depo...">
-
+                    <label>E-Mail</label>
+                    <input type="email" name="email" id="input_email" placeholder="email@ornek.com" required>
                 </div>
 
                 <div class="form-group">
-
-                    <label>Biyometrik Fotoğraf</label>
-
-                    <input type="file"
-                        name="foto">
-
+                    <label>Şifre</label>
+                    <input type="password" name="sifre" id="input_sifre" placeholder="En az 8 karakter" required>
                 </div>
 
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="text" name="telefon" id="input_tel" placeholder="05XX XXX XX XX" required>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label class="cb-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" name="sozlesme_onay" id="sozlesme_cb" required style="width: auto; cursor: pointer;">
+                        <span>
+                            <a href="javascript:void(0);" onclick="openSozlesmeModal()" style="color: var(--accent); text-decoration: underline; font-weight: 600;">
+                                Kullanıcı Sözleşmesini
+                            </a> 
+                            okudum ve kabul ediyorum.
+                        </span>
+                    </label>
+                </div>
+
+                <div class="modal-overlay" id="modal-sozlesme" style="display: none; position: fixed; inset: 0; z-index: 999; background: rgba(248, 248, 248, 0.539); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 20px;">
+                    <div class="modal" style="background: white; border: 1px solid var(--border); border-radius: 24px; padding: 32px; max-width: 650px; width: 100%; max-height: 80vh; display: flex; flex-direction: column; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                        <button type="button" onclick="closeSozlesmeModal()" style="position: absolute; top: 20px; right: 20px; border: 1px solid var(--border); background: none; border-radius: 10px; width: 36px; height: 36px; cursor: pointer; font-weight: bold;">✕</button>
+                        <h2 style="font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Kullanıcı Sözleşmesi</h2>
+                        <div style="overflow-y: auto; flex: 1; padding-right: 10px; font-size: 14px; line-height: 1.6;">
+                            <p>Sözleşme şartları ve KVKK aydınlatma metni buraya eklenecektir...</p>
+                        </div>
+                        <button type="button" onclick="closeSozlesmeModal()" class="submit-btn" style="margin-top: 20px; padding: 12px; font-size: 16px;">Okudum, Kapat</button>
+                    </div>
+                </div>
+
+                <button type="button" id="kayit-butonu" class="submit-btn">Devam Et ➔</button>
             </div>
 
-            <button class="submit-btn">
+            <div class="reg-step" id="step2">
+                <h2 style="font-family:'Syne',sans-serif; margin-bottom:25px;">Hesap Türü Seç</h2>
 
-                Kayıt Ol →
+                <div class="type-chooser">
+                    <div class="type-card" onclick="selectType('calisan')" id="tc-calisan">
+                        <div class="tc-icon">👷</div>
+                        <h3>Çalışan</h3>
+                        <p>Günlük işlere başvur.</p>
+                    </div>
+                    <div class="type-card" onclick="selectType('isletme')" id="tc-isletme">
+                        <div class="tc-icon">🏢</div>
+                        <h3>İşletme</h3>
+                        <p>Çalışan bul ve ilan ver.</p>
+                    </div>
+                </div>
 
-            </button>
+                <div id="isletme-fields" style="display:none;margin-top:30px;">
+                    <div class="form-group">
+                        <label>İşletme Adı</label>
+                        <input type="text" name="isletme_adi">
+                    </div>
+                    <div class="form-group">
+                        <label>İşletme Adresi</label>
+                        <input type="text" name="isletme_adresi">
+                    </div>
+                    <div class="form-group">
+                        <label>İşletme Türü</label>
+                        <select name="isletme_tipi">
+                            <option>Restoran / Cafe</option>
+                            <option>Market</option>
+                            <option>Otel</option>
+                            <option>Depo / Lojistik</option>
+                            <option>Güvenlik</option>
+                            <option>Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>İhtiyaç Duyulan Meslekler</label>
+                        <input type="text" name="aranan_meslekler" placeholder="Garson, Kasiyer...">
+                    </div>
+                </div>
 
-        </div>
+                <div id="calisan-fields" style="display:none;margin-top:30px;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Boy (cm)</label>
+                            <input type="number" name="boy" placeholder="175">
+                        </div>
+                        <div class="form-group">
+                            <label>Kilo (kg)</label>
+                            <input type="number" name="kilo" placeholder="70">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Cinsiyet</label>
+                        <select name="cinsiyet">
+                            <option>Erkek</option>
+                            <option>Kadın</option>
+                            <option>Belirtmek istemiyorum</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Meslekler / Deneyim</label>
+                        <input type="text" name="meslekler" placeholder="Garson, Kasiyer, Depo...">
+                    </div>
+                    <div class="form-group">
+                        <label>Biyometrik Fotoğraf</label>
+                        <input type="file" name="foto">
+                    </div>
+                </div>
 
-    </form>
-
-</div>
-
-    <!-- INFO -->
+                <button type="submit" class="submit-btn" style="margin-top: 30px;">Kayıt Ol →</button>
+            </div>
+        </form>
+    </div>
 
     <div class="info-grid">
-
         <div class="info-card">
-
-            <div class="info-icon">
-                🛡
-            </div>
-
+            <div class="info-icon">🛡</div>
             <h3>Güvenli Kayıt</h3>
-
-            <p>
-                Bilgileriniz 256-bit SSL ile korunur.
-            </p>
-
+            <p>Bilgileriniz 256-bit SSL ile korunur.</p>
         </div>
-
         <div class="info-card">
-
-            <div class="info-icon">
-                ⚡
-            </div>
-
+            <div class="info-icon">⚡</div>
             <h3>Hızlı İşlem</h3>
-
-            <p>
-                Sadece birkaç adımda hesabınızı oluşturun.
-            </p>
-
+            <p>Sadece birkaç adımda hesabınızı oluşturun.</p>
         </div>
-
         <div class="info-card">
-
-            <div class="info-icon">
-                ✅
-            </div>
-
+            <div class="info-icon">✅</div>
             <h3>Doğrulanmış Hesap</h3>
-
-            <p>
-                E-posta ile hesabınızı doğrulayın.
-            </p>
-
+            <p>E-posta ile hesabınızı doğrulayın.</p>
         </div>
-
     </div>
-
 </div>
+
 <script>
-
 function goStep2(){
-
-    document.getElementById('step1')
-    .classList.remove('active');
-
-    document.getElementById('step2')
-    .classList.add('active');
-
+    document.getElementById('step1').classList.remove('active');
+    document.getElementById('step2').classList.add('active');
 }
 
 function selectType(type){
     document.getElementById('hesap_turu').value = type;
 
-    document.getElementById('tc-calisan')
-    .classList.remove('selected');
+    document.getElementById('tc-calisan').classList.remove('selected');
+    document.getElementById('tc-isletme').classList.remove('selected');
+    document.getElementById('tc-' + type).classList.add('selected');
 
-    document.getElementById('tc-isletme')
-    .classList.remove('selected');
-
-    document.getElementById('tc-' + type)
-    .classList.add('selected');
-
-    document.getElementById('isletme-fields')
-    .style.display = 'none';
-
-    document.getElementById('calisan-fields')
-    .style.display = 'none';
+    document.getElementById('isletme-fields').style.display = 'none';
+    document.getElementById('calisan-fields').style.display = 'none';
 
     if(type === 'isletme'){
-
-        document.getElementById('isletme-fields')
-        .style.display = 'block';
-
+        document.getElementById('isletme-fields').style.display = 'block';
     }
-
     if(type === 'calisan'){
-
-        document.getElementById('calisan-fields')
-        .style.display = 'block';
-
+        document.getElementById('calisan-fields').style.display = 'block';
     }
-
 }
 
 function openSozlesmeModal() {
-        document.getElementById('modal-sozlesme').style.display = 'flex';
+    document.getElementById('modal-sozlesme').style.display = 'flex';
+}
+
+function closeSozlesmeModal() {
+    document.getElementById('modal-sozlesme').style.display = 'none';
+}
+
+window.addEventListener('click', function(e) {
+    var modal = document.getElementById('modal-sozlesme');
+    if (e.target === modal) {
+        closeSozlesmeModal();
     }
-
-    function closeSozlesmeModal() {
-        document.getElementById('modal-sozlesme').style.display = 'none';
-    }
-
-    // Dışarıya tıklayınca da kapansın diye olay dinleyici
-    window.addEventListener('click', function(e) {
-        var modal = document.getElementById('modal-sozlesme');
-        if (e.target === modal) {
-            closeSozlesmeModal();
-        }
-    });
-
-    document.getElementById('kayit-butonu').addEventListener('click', function(e) {
-    var checkbox = document.querySelector('input[name="sozlesme_onay"]');
-    
-    if (!checkbox.checked) {
-        e.stopImmediatePropagation(); 
-        alert("⚠️ Devam edebilmek için lütfen Kullanıcı Sözleşmesi'ni okuyup onaylayın.");
-    } else{
-        goStep2()};
 });
 
+// ZORUNLU ALAN BOŞLUK KONTROLÜ
+document.getElementById('kayit-butonu').addEventListener('click', function(e) {
+    var ad = document.getElementById('input_ad').value;
+    var soyad = document.getElementById('input_soyad').value;
+    var dt = document.getElementById('input_dt').value;
+    var email = document.getElementById('input_email').value;
+    var sifre = document.getElementById('input_sifre').value;
+    var tel = document.getElementById('input_tel').value;
+    var sozlesme = document.getElementById('sozlesme_cb').checked;
+
+
+
+
+    if (!sozlesme) {
+        alert("⚠️ Devam edebilmek için lütfen Kullanıcı Sözleşmesi'ni okuyup onaylayın.");
+        return;
+    }
+    if (!ad || !soyad || !dt || !email || !sifre || !tel) {
+        alert("⚠️ Lütfen tüm alanları doldurunuz (Ad, Soyad, Doğum Tarihi, E-posta, Şifre, Telefon).");
+        return;
+    }
+
+
+
+    goStep2();
+});
 </script>
 </body>
 </html>
